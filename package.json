@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+
+    "predefloy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "chart.js": "^4.5.1",
