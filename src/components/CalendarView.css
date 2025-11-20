@@ -1,0 +1,94 @@
+/* ===============================
+   📅 CalendarView (라이트/다크 자동 적용)
+================================ */
+
+.calendar-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+
+  background: var(--card-glass);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px var(--shadow-color);
+
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* 헤더 */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+
+  color: var(--accent-color);
+  transition: color 0.25s ease;
+}
+
+/* 요일 + 날짜 */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-day-name {
+  text-align: center;
+  font-weight: 600;
+  color: var(--accent-color);
+  transition: color 0.25s ease;
+}
+
+/* 날짜 셀 */
+.calendar-day {
+  height: 65px;
+  text-align: right;
+  padding: 10px;
+  border-radius: 10px;
+
+  background: var(--card-bg);
+  box-shadow: 0 3px 6px var(--shadow-color);
+
+  font-size: 14px;
+  color: var(--text-color);
+  position: relative;
+
+  transition: 
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.calendar-day:hover {
+  background: var(--accent-light);
+  color: white;
+}
+
+/* 오늘 날짜 */
+.calendar-day.today {
+  background: var(--accent-color);
+  color: white !important;
+  font-weight: bold;
+}
+
+/* 토요일 */
+.calendar-day.saturday {
+  color: #4e7fff; /* 토요일은 포인트 색이므로 변수 아님 */
+}
+
+/* 일요일 */
+.calendar-day.sunday {
+  color: #ff6262; /* 일요일도 강조 색상 별도 유지 */
+}
+
+/* 이전/다음 달 날짜 */
+.calendar-day.disabled {
+  opacity: 0.3;
+}

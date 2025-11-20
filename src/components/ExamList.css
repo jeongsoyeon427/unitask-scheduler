@@ -1,0 +1,98 @@
+/* ============================================
+   📝 ExamList (라이트/다크 자동 대응)
+============================================ */
+
+.el-card {
+  background: var(--card-bg);
+  padding: 22px 24px;
+  border-radius: 18px;
+
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 24px var(--shadow-color);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* 제목 */
+.el-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  transition: color 0.25s ease;
+}
+
+/* 비어 있을 때 */
+.el-empty {
+  text-align: center;
+  padding: 20px 0;
+  color: var(--subtext-color);
+  transition: color 0.25s ease;
+}
+
+/* 시험 항목 */
+.el-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 10px;
+  margin-bottom: 10px;
+
+  border-radius: 14px;
+  background: var(--card-bg);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.el-item:hover {
+  background: var(--card-glass);
+}
+
+/* 과목 태그 */
+.el-subject {
+  padding: 4px 8px;
+  background: var(--accent-light);
+  border-radius: 8px;
+
+  color: white;
+  font-size: 12px;
+  margin-right: 10px;
+  font-weight: 600;
+
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* 시험명 */
+.el-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: color 0.25s ease;
+}
+
+/* 우측 영역 */
+.el-right {
+  display: flex;
+  gap: 12px;
+}
+
+/* 시험 날짜 */
+.el-date {
+  color: var(--subtext-color);
+  font-size: 13px;
+  transition: color 0.25s ease;
+}
+
+/* D-Day는 강조색 유지 */
+.el-dday {
+  color: #ff6498;     /* 강조 포인트 컬러 그대로 */
+  font-size: 13px;
+  font-weight: 700;
+}

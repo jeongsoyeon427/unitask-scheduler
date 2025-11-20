@@ -1,0 +1,71 @@
+/* ===============================
+   📊 DashboardChart (라이트/다크 자동 적용)
+================================ */
+
+.dc-card {
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: 16px;
+
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 20px var(--shadow-color);
+
+  margin-top: 20px;
+  transition: 
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.dc-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* -----------------------------
+   내부 차트 박스
+----------------------------- */
+.dc-charts {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.dc-chart-item {
+  width: 48%;
+
+  background: var(--card-glass);
+  padding: 20px;
+  border-radius: 12px;
+
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px var(--shadow-color);
+
+  transition: 
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* ------------------------------------------
+   ✔ 빈 상태 UI 스타일 (테마 호환 버전)
+------------------------------------------ */
+.dc-card.empty {
+  text-align: center;
+  padding: 40px;
+}
+
+.empty-box {
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 12px;
+
+  background: var(--card-glass);
+  color: var(--accent-color);
+  font-weight: 500;
+
+  border: 2px dashed var(--accent-light);
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}

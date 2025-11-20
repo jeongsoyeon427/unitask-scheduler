@@ -1,0 +1,73 @@
+/* --------------------------------------
+   📌 Dropdown Container
+-------------------------------------- */
+.dropdown {
+  position: relative;
+  width: 150px;
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* --------------------------------------
+   📌 Selected Box
+-------------------------------------- */
+.dropdown-selected {
+  background: #ffffff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d7e0;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.15s ease;
+}
+
+.dropdown-selected:hover {
+  border-color: #b3bdca;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-arrow {
+  font-size: 11px;
+  color: #334155;
+}
+
+/* --------------------------------------
+   📌 Dropdown List (Options)
+-------------------------------------- */
+.dropdown-list {
+  list-style: none;
+  padding: 6px 0;
+  margin: 0;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e1e4ea;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  position: absolute;
+  width: 100%;
+  top: 45px;
+  z-index: 10;
+  animation: fadeIn 0.15s ease;
+}
+
+/* 팝업 애니메이션 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --------------------------------------
+   📌 Option Item
+-------------------------------------- */
+.dropdown-item {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.15s ease;
+}
+
+.dropdown-item:hover {
+  background: #f4f7fb;
+}

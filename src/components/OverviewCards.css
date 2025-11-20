@@ -1,0 +1,83 @@
+/* ===============================
+   📊 OverviewCards (라이트/다크 자동 적용)
+================================ */
+
+.oc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+/* 공통 카드 스타일 */
+.oc-card {
+  background: var(--card-bg);
+  padding: 24px 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 26px var(--shadow-color);
+  border: 1px solid var(--border-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  transition: 
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s;
+
+  cursor: default;
+}
+
+.oc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px var(--shadow-color);
+}
+
+/* 아이콘 */
+.oc-icon {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+/* 제목 */
+.oc-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--subtext-color);
+  transition: color 0.25s;
+}
+
+/* 숫자(값) */
+.oc-value {
+  margin-top: 6px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-color);
+  transition: color 0.25s;
+}
+
+/* ===============================
+   좌측 컬러 바 (테마 호환)
+=============================== */
+
+/* 보라 */
+.oc-card.purple {
+  border-left: 6px solid var(--accent-color);
+}
+
+/* 파랑 */
+.oc-card.blue {
+  border-left: 6px solid #4d7dff;
+}
+
+/* 민트 */
+.oc-card.mint {
+  border-left: 6px solid #4ddbbd;
+}
+
+/* 노랑 */
+.oc-card.yellow {
+  border-left: 6px solid #f6c94c;
+}

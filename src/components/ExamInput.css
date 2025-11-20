@@ -1,0 +1,84 @@
+/* ============================================
+   📝 ExamInput (라이트/다크 자동 대응)
+============================================ */
+
+.ex-card {
+  background: var(--card-bg);
+  padding: 22px 24px;
+  border-radius: 18px;
+
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 24px var(--shadow-color);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* 제목 */
+.ex-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 18px;
+
+  color: var(--text-color);
+  transition: color 0.25s ease;
+}
+
+/* 행 */
+.ex-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+/* 입력창 */
+.ex-row input {
+  flex: 1;
+  padding: 12px 14px;
+
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+
+  font-size: 14px;
+  color: var(--text-color);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.ex-row input::placeholder {
+  color: var(--subtext-color);
+}
+
+/* 포커스 효과 */
+.ex-row input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 6px var(--accent-light);
+}
+
+/* 버튼 */
+.ex-btn {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 12px;
+
+  background: var(--accent-color);
+  color: white;
+
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+
+  transition: background 0.25s ease;
+}
+
+.ex-btn:hover {
+  background: var(--accent-light);
+}
