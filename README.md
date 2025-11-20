@@ -31,10 +31,15 @@ React와 Vite 기반으로 개발된 개인 일정 및 작업(Task) 관리 웹 �
 3. 기술 스택 (Tech Stack)
 
 프론트 엔드 : React, JavaScript
+
 빌드 도구 : Vite
+
 스타일링 : CSS
+
 캘린더 : react-calendar
+
 차트 : chart.js, react-chartjs-2
+
 배포 : GitHub Pages
 
 4. 프로젝트 구조 (Project Structure)
