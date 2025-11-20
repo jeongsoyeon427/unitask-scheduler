@@ -1,6 +1,7 @@
 # Unitask Scheduler
 
 간단하고 직관적인 UI로 할 일(Task)과 스케줄을 관리할 수 있는 React + Vite 기반 웹 애플리케이션입니다.
+
 GitHub Pages를 통해 언제 어디서든 접근할 수 있습니다.
 
 배포 링크 : https://jeongsoyeon427.github.io/unitask-scheduler/
