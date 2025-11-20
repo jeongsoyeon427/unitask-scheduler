@@ -14,7 +14,7 @@
   "devDependencies": {
     "vite": "^5.0.0",
     "gh-pages": "^5.0.0"
-  }v
+  }
 }
   "devDependencies": {
     "@eslint/js": "^9.39.1",
