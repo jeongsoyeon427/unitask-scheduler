@@ -11,15 +11,15 @@ GitHub Pages를 통해 언제 어디서든 접근할 수 있습니다.
 
 🗓️ 일정(Calendar) 관리
 
-react-calendar 기반의 직관적인 UI
-날짜 선택 및 일정 조회 기능
-일정(To-Do) 등록 / 완료 처리 / 삭제
+* react-calendar 기반의 직관적인 UI
+* 날짜 선택 및 일정 조회 기능
+* 일정(To-Do) 등록 / 완료 처리 / 삭제
 
 📋 할 일(To-Do) 관리
 
-Task 입력, 완료 처리, 삭제
-Chart.js 기반 통계 시각화
-React 상태 관리 기반 즉각 반영
+* Task 입력, 완료 처리, 삭제
+* Chart.js 기반 통계 시각화
+* React 상태 관리 기반 즉각 반영
 
 🛠 기술 스택
 
@@ -68,4 +68,4 @@ npm run build
 
 npm run deploy
 
-* 빌드 결과는 자동으로 gh-pages 브랜치로 push가 됩니다.
+=> 빌드 결과는 자동으로 gh-pages 브랜치로 push가 됩니다.
