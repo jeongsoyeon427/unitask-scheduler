@@ -39,16 +39,7 @@ React와 Vite 기반으로 개발된 개인 일정 및 작업(Task) 관리 웹 �
 
 4. 프로젝트 구조 (Project Structure)
 
-unitask-scheduler/
-├─ public/
-│  └─ index.html
-├─ src/
-│  ├─ components/
-│  ├─ styles/
-│  ├─ App.jsx
-│  ├─ main.jsx
-├─ package.json
-└─ vite.config.js
+unitask-scheduler > public(index.html) > src(components, styles, App.jsx, main.jsx), package.json, vite.config.js
 
 5. 설치 및 실행 (Setup & Execution)
 
