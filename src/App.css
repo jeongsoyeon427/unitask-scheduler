@@ -155,3 +155,84 @@ input::placeholder {
     width: 100%;
   }
 }
+
+/* =============================
+   기본 전체 레이아웃 스타일
+============================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* 카드 / 박스 공통 디자인 */
+.card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+}
+
+/* 상태 카드 4개 묶음 */
+.status-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.status-card {
+  flex: 1;
+  min-width: 120px;
+  background: white;
+  border-radius: 16px;
+  padding: 20px 14px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* ===================================================
+   📱 모바일 레이아웃 전체 재조정 (진짜 핵심)
+=================================================== */
+@media (max-width: 768px) {
+
+  /* 전체를 1열로 강제 */
+  .main-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 20px !important;
+  }
+
+  /* 오른쪽 컬럼을 100%로 확장 */
+  .right-column {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* section-card(오늘해야할일/추가/목록/시험)는 100% */
+  .section-card {
+    width: 100% !important;
+    margin: 12px 0 !important;
+    padding: 18px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* DashboardChart도 100% */
+  .dc-card {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 캘린더도 100% width */
+  .calendar-container {
+    width: 100% !important;
+    padding: 16px !important;
+    box-sizing: border-box !important;
+  }
+}

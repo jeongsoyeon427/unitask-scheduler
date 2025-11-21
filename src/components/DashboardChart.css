@@ -69,3 +69,55 @@
   border: 2px dashed var(--accent-light);
   transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
+
+/* =========================================
+   📱 DashboardChart 모바일 전용 수정
+========================================= */
+@media screen and (max-width: 768px) {
+
+  /* 차트 2개를 세로로 정렬 */
+  .dc-charts {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  /* 각 차트 박스를 전체폭으로 */
+  .dc-chart-item {
+    width: 100% !important;
+  }
+
+  /* 내부 패딩 축소 (모바일 화면에 맞게) */
+  .dc-chart-item {
+    padding: 16px !important;
+  }
+
+  /* 빈 상태 UI 모바일 최적화 */
+  .dc-card.empty {
+    padding: 24px !important;
+    text-align: center;
+  }
+
+  .empty-box {
+    padding: 24px !important;
+  }
+}
+
+/* =========================================
+   📱 모바일에서 학습 대시보드를 시험 일정처럼 넓게
+========================================= */
+@media screen and (max-width: 768px) {
+
+  /* dc-card 전체를 가로 폭 100%로 확장 */
+  .dc-card {
+    width: 100% !important;
+  }
+
+  /* empty 상태(빈 데이터) padding 줄여서 시험 일정과 동일한 폭 느낌 */
+  .dc-card.empty {
+    padding: 20px !important;
+  }
+
+  .empty-box {
+    padding: 20px !important;
+  }
+}

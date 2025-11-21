@@ -92,3 +92,67 @@
 .calendar-day.disabled {
   opacity: 0.3;
 }
+
+/* ===========================
+
+   📱 모바일 최적화 (필수)
+
+=========================== */
+
+@media (max-width: 768px) {
+  .calendar-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 16px !important;
+    margin: 0 auto !important;
+    border-radius: 12px;
+  }
+
+  .calendar-header h2 {
+    font-size: 18px !important;
+  }
+
+  .calendar-header button {
+    font-size: 18px !important;
+  }
+
+  .calendar-grid {
+    gap: 4px !important;
+  }
+
+  .calendar-day {
+    height: 42px !important;
+    padding: 6px !important;
+    font-size: 12px !important;
+    border-radius: 6px !important;
+  }
+
+  .calendar-day-name {
+    font-size: 12px !important;
+  }
+}
+
+/* ===========================
+
+   📱 더 작은 화면 (iPhone SE)
+
+=========================== */
+@media (max-width: 430px) {
+  .calendar-container {
+    padding: 12px !important;
+  }
+
+
+
+  .calendar-day {
+    height: 38px !important;
+    font-size: 11px !important;
+    padding: 5px !important;
+  }
+
+
+
+  .calendar-grid {
+    gap: 3px !important;
+  }
+}
