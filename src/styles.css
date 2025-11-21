@@ -233,3 +233,30 @@ button:hover {
     padding: 22px 18px !important;
   }
 }
+
+/* ===============================
+   📱 모바일 헤더 전용 정리
+================================ */
+@media (max-width: 768px) {
+
+  /* 헤더 전체를 세로 정렬로 변경 */
+  .dashboard-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+  }
+
+  /* UniTask Scheduler 제목 크기 조정 */
+  .dashboard-header h1 {
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* 드롭다운 + 다크모드 버튼 한 줄 */
+  .top-controls {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+}

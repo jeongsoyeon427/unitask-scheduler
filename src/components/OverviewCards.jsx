@@ -1,4 +1,4 @@
-import "./OverviewCards_v2.css";
+import "./OverviewCards.css";
 
 export default function OverviewCards({ assignments, exams }) {
   const today = new Date().toISOString().slice(0, 10);
