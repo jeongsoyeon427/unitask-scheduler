@@ -9,8 +9,12 @@ import AssignmentInput from "./components/AssignmentInput";
 import AssignmentList from "./components/AssignmentList";
 import ExamInput from "./components/ExamInput";
 import ExamList from "./components/ExamList";
-import DashboardChart from "./components/DashboardChart";
+// DashboardChart 제거
+// import DashboardChart from "./components/DashboardChart";
 import CalendarView from "./components/CalendarView";
+
+// 새로 추가된 MemoBox
+import MemoBox from "./components/MemoBox";
 
 export default function App() {
   const [assignments, setAssignments] = useState([]);
@@ -105,11 +109,12 @@ export default function App() {
 
         {/* ------- 오른쪽 컬럼 ------- */}
         <div className="right-column">
-          <section className="section-card">
-            <DashboardChart assignments={assignments} exams={exams} />
-          </section>
+          {/* 🟣 DashboardChart 제거 */}
 
-          {/* ❗ CalendarView는 section-card로 감싸지 않는다 */}
+          {/* 📝 메모 박스 추가 */}
+          <MemoBox />
+
+          {/* 📅 캘린더 */}
           <CalendarView />
         </div>
       </div>
