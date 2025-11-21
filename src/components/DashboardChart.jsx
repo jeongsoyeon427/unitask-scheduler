@@ -1,5 +1,6 @@
 import React from "react";
 import "./DashboardChart.css";
+
 import {
   Chart as ChartJS,
   ArcElement,
@@ -9,6 +10,7 @@ import {
   LinearScale,
   BarElement
 } from "chart.js";
+
 import { Doughnut, Bar } from "react-chartjs-2";
 
 ChartJS.register(
@@ -21,12 +23,19 @@ ChartJS.register(
 );
 
 export default function DashboardChart({ assignments, exams }) {
+  /* ================================
+     📌 데이터 계산
+  ================================= */
   const doneCount = assignments.filter((a) => a.done).length;
   const notDoneCount = assignments.length - doneCount;
 
-  const examLabels = exams.map((exam) => exam.subject);
-  const examCounts = exams.map(() => 1);
+  const hasExams = exams.length > 0;
+  const examLabels = hasExams ? exams.map((e) => e.subject) : ["시험 없음"];
+  const examCounts = hasExams ? exams.map(() => 1) : [0];
 
+  /* ================================
+     📌 도넛 차트
+  ================================= */
   const doughnutData = {
     labels: ["완료", "미완료"],
     datasets: [
@@ -38,20 +47,24 @@ export default function DashboardChart({ assignments, exams }) {
     ]
   };
 
+  /* ================================
+     📌 막대 차트
+  ================================= */
   const barData = {
-    labels: examLabels.length > 0 ? examLabels : ["시험 없음"],
+    labels: examLabels,
     datasets: [
       {
         label: "시험 수",
-        data: examCounts.length > 0 ? examCounts : [0],
-        backgroundColor: "#7c4dff"
+        data: examCounts,
+        backgroundColor: "#7c4dff",
+        borderRadius: 6
       }
     ]
   };
 
-  // --------------------------------------------------------
-  // ✔ 방법 2: 데이터 없을 때 "빈 상태 UI"를 보여주는 코드
-  // --------------------------------------------------------
+  /* ================================
+     📌 빈 상태 안내 UI
+  ================================= */
   if (assignments.length === 0 && exams.length === 0) {
     return (
       <div className="dc-card empty">
@@ -65,21 +78,39 @@ export default function DashboardChart({ assignments, exams }) {
     );
   }
 
-  // --------------------------------------------------------
-
+  /* ================================
+     📌 정상 UI
+  ================================= */
   return (
     <div className="dc-card">
       <h3 className="dc-title">📊 학습 대시보드</h3>
 
       <div className="dc-charts">
+        {/* 진행률 */}
         <div className="dc-chart-item">
           <h4>진행률</h4>
-          <Doughnut data={doughnutData} />
+          <Doughnut
+            data={doughnutData}
+            options={{
+              plugins: { legend: { display: false } },
+              maintainAspectRatio: false
+            }}
+          />
         </div>
 
+        {/* 시험 수 그래프 */}
         <div className="dc-chart-item">
           <h4>시험 수</h4>
-          <Bar data={barData} />
+          <Bar
+            data={barData}
+            options={{
+              plugins: { legend: { display: false } },
+              maintainAspectRatio: false,
+              scales: {
+                y: { beginAtZero: true, ticks: { stepSize: 1 } }
+              }
+            }}
+          />
         </div>
       </div>
     </div>

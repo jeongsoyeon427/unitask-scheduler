@@ -1,4 +1,4 @@
-import "./OverviewCards.css";
+import "./OverviewCards_v2.css";
 
 export default function OverviewCards({ assignments, exams }) {
   const today = new Date().toISOString().slice(0, 10);
@@ -16,19 +16,19 @@ export default function OverviewCards({ assignments, exams }) {
 
       <div className="oc-card purple">
         <div className="oc-icon">🔥</div>
-        <div className="oc-title">오늘 해야 할 일</div>
+        <div className="oc-title">오늘할일</div>
         <div className="oc-value">{todayTasks}</div>
       </div>
 
       <div className="oc-card blue">
         <div className="oc-icon">📚</div>
-        <div className="oc-title">미완료 과제</div>
+        <div className="oc-title">미완과제</div>
         <div className="oc-value">{undone}</div>
       </div>
 
       <div className="oc-card mint">
         <div className="oc-icon">📅</div>
-        <div className="oc-title">오늘 시험 수</div>
+        <div className="oc-title">오늘시험</div>
         <div className="oc-value">{todayExams}</div>
       </div>
 

@@ -1,0 +1,73 @@
+/* ===============================
+   📊 OverviewCards 기본 레이아웃
+================================ */
+.oc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+/* 카드 공통 */
+.oc-card {
+  background: var(--card-bg);
+  padding: 22px 20px;
+  border-radius: 18px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 26px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: 0.25s ease;
+}
+
+/* 아이콘 */
+.oc-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* 제목 */
+.oc-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--subtext-color);
+  white-space: nowrap;
+}
+
+/* 숫자 */
+.oc-value {
+  margin-top: 6px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* 좌측 색 바 */
+.oc-card.purple { border-left: 6px solid var(--accent-color); }
+.oc-card.blue   { border-left: 6px solid #4d7dff; }
+.oc-card.mint   { border-left: 6px solid #4ddbbd; }
+.oc-card.yellow { border-left: 6px solid #f6c94c; }
+
+/* ===============================
+   📱 모바일 완전 고정 (핵심)
+================================ */
+@media (max-width: 768px) {
+
+  /* 두 개씩 2열 */
+  .oc-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+
+  /* 카드 중앙 정렬로 변경 (제목 절대 안 깨짐) */
+  .oc-card {
+    align-items: center !important;
+    text-align: center !important;
+    padding: 18px !important;
+  }
+
+  /* 제목 */
+  .oc-title {
+    white-space: nowrap !important;
+    font-size: 14px !important;
+  }
+}
